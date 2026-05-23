@@ -1,0 +1,187 @@
+:root {
+  --bg-dark: #0f2407;
+  --text-main: #ffffff; /* Темно-зеленый для сочности и читаемости */
+  --text-muted: hwb(108 14% 69%);
+  --text-info: #000000;
+  --accent-gold: #f3e5ab;
+  --bright-gold: #ffd700;
+  /* --bright-gold: #b38600; Золото для иконок и деталей */
+  --gold-glow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  color: var(--text-main);
+  font-family: "Georgia", serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 20px;
+}
+
+/* Элегантная карточка с эффектом матового стекла */
+.invitation-card {
+  /* Подключаем ваше фото на весь экран сайта */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Красивая двойная рамка */
+  border: 4px double var(--text-main);
+  box-shadow: var(--gold-glow);
+  border-radius: 16px;
+  padding: 50px 30px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.subtitle {
+  color: var(--text);
+  letter-spacing: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.guest-greeting {
+  padding-top:10px ;
+  font-size: 26px;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--bright-gold);
+  text-underline-offset: 6px;
+}
+
+.title {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.name {
+  color: var(--bright-gold);
+
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  margin: 12px 0;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* Контейнер с датой и местом (ЕДИНЫЙ БЛОК: картинка строго внутри рамки) */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* Объединяем высветляющую подложку и ваше фото в один класс */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.78),
+      rgba(255, 255, 255, 0.82)
+    ),
+    url("/images.jpg");
+  background-size: cover;
+  background-position: center;
+
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 31, 5, 0.15);
+  margin: 25px 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 4px; */
+}
+
+.info-item h3 {
+  font-size: 11px;
+  color: var(--text-info);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.info-item p {
+  font-size: 18px;
+  color: var(--text-info);
+  font-weight: bold;
+}
+
+.address {
+  font-size: 14px;
+  color: var(--text-info);
+  font-weight: normal !important;
+}
+
+.footer-text {
+  margin-top: 35px;
+  font-size: 22px;
+  color: var(--text-main);
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Панели управления (не идут на фото) */
+.generator-panel {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 460px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.generator-input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  text-align: center;
+}
+
+.download-button {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+.download-button:hover {
+  background: #fff;
+  color: #000;
+}
