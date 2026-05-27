@@ -93,7 +93,7 @@ export default function App() {
         style={{ marginTop: "25px" }}
       >
         <Download size={18} />
-        {isDownloading ? "Һаҡлана" : "Фото итеп һаҡларға (Сохранить как фото)"}
+        {isDownloading ? "Һаҡлана..." : "Фото итеп һаҡларға (Сохранить как фото)"}
       </button>
     </div>
   );
